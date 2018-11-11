@@ -13,36 +13,39 @@ class TestsBlackbox(BlackboxTester):
     def test_camel_case(self):
         r'''
         "TEFT": "test",
+        "TH-": "this",
         "KAPL": "{:retro_case:false:true}",
 
         TEFT " test"
-        TEFT " test test"
-        TEFT " test test test"
-        KAPL " test testTest"
-        KAPL " testTestTest"
-        KAPL " testTestTest"
+        TH " test this"
+        TEFT " test this test"
+        KAPL " test thisTest"
+        KAPL " testThisTest"
+        KAPL " testThisTest"
         '''
 
     def test_pascal_case(self):
         r'''
         "TEFT": "test",
+        "TH-": "this",
         "PAFBG": "{:retro_case:true:true}"
 
         TEFT " test"
-        TEFT " test test"
-        TEFT " test test test"
-        PAFBG " test TestTest"
-        PAFBG " TestTestTest"
+        TH " test this"
+        TEFT " test this test"
+        PAFBG " test ThisTest"
+        PAFBG " TestThisTest"
         '''
 
     def test_snake_case(self):
         r'''
         "TEFT": "test",
+        "TH-": "this",
         "STPHAEUBG": "{:retro_case:false:false:_}"
 
         TEFT " test"
-        TEFT " test test"
-        TEFT " test test test"
-        STPHAEUBG " test test_test"
-        STPHAEUBG " test_test_test"
+        TH " test this"
+        TEFT " test this test"
+        STPHAEUBG " test this_test"
+        STPHAEUBG " test_this_test"
         '''

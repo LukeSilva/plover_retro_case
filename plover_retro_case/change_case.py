@@ -5,8 +5,8 @@ def change_case(words, capPrev, capThis, delim):
       return words[0]
 
     text = ''
-    leftWord = words[1].rstrip()
-    rightWord = words[0].rstrip()
+    leftWord = words[0].rstrip()
+    rightWord = words[1].rstrip()
 
     if capPrev:
       leftWord = leftWord[:1].upper() + leftWord[1:]
